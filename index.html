@@ -34,7 +34,7 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    .header-inner img { height: 100px; }
+    .header-inner img { height: 130px; }
     .header-tagline {
       font-size: 0.85rem;
       color: #555;
@@ -75,11 +75,11 @@
 
     /* ── Seções ── */
     .hero-logo {
-  max-width: 280px;
-  width: 80%;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
-}
+      max-width: 280px;
+      width: 80%;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,.2));
+    }
     section {
       max-width: 960px;
       margin: 0 auto;
@@ -114,6 +114,8 @@
     }
     @media (max-width: 640px) {
       .services-grid { grid-template-columns: 1fr; }
+      .header-inner img { height: 90px; }
+      .hero-logo { max-width: 220px; }
     }
     .service-card {
       background: #fff;
