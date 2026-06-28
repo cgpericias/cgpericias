@@ -1,66 +1,332 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CG Perícias e Assistência Técnica</title>
-    <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body {
-        font-family: system-ui, sans-serif;
-        background: #f4f6f8;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
-      .card {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 8px 32px rgba(0,0,0,.10);
-        padding: 48px 40px;
-        text-align: center;
-        max-width: 480px;
-        width: 90%;
-      }
-      .card img {
-        max-width: 200px;
-        margin-bottom: 24px;
-      }
-      .card h1 {
-        font-size: 1.5rem;
-        color: #1a1a2e;
-        margin-bottom: 10px;
-      }
-      .card p {
-        color: #555;
-        margin-bottom: 28px;
-        font-size: 1rem;
-      }
-      a.btn {
-        display: inline-block;
-        background: #1a6e3c;
-        color: #fff;
-        padding: 14px 32px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1rem;
-        transition: background 0.2s;
-      }
-      a.btn:hover { background: #145530; }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <!-- https://1drv.ms/i/c/68e2f37e4d0d6149/IQAhABsulreJS4-lBXyW6eTAAaCUMAIGYU5W3JyqLXXQHA4?e=oAYbGw -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CG Perícias e Assistência Técnica em Sistema de Revestimento Cerâmico | Engenharia de Materiais</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f4f6f8;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 3px solid #1a6e3c;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .header-inner img { height: 56px; }
+    .header-tagline {
+      font-size: 0.85rem;
+      color: #555;
+      text-align: right;
+      line-height: 1.3;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0f2b1a 0%, #1a4e2e 50%, #145530 100%);
+      color: #fff;
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .hero .subtitle {
+      font-size: 1.1rem;
+      color: #cde6d0;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+    .hero .btn {
+      display: inline-block;
+      background: #fff;
+      color: #1a6e3c;
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .hero .btn:hover { background: #e8f5e9; transform: translateY(-2px); }
+
+    /* ── Seções ── */
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+    section h2 {
+      font-size: 1.6rem;
+      color: #1a4e2e;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    section .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 36px;
+    }
+
+    /* ── Apresentação ── */
+    .about p {
+      font-size: 1.05rem;
+      color: #444;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ── Serviços ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    @media (max-width: 640px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+      border-top: 4px solid #1a6e3c;
+      transition: transform 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); }
+    .service-card h3 {
+      font-size: 1.2rem;
+      color: #1a4e2e;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-card p, .service-card ul {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .service-card ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .service-card li { margin-bottom: 4px; }
+
+    /* ── Público ── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .audience-grid { grid-template-columns: 1fr; }
+    }
+    .audience-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 14px rgba(0,0,0,.04);
+      text-align: center;
+    }
+    .audience-card .icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .audience-card h4 {
+      font-size: 1rem;
+      color: #1a4e2e;
+      margin-bottom: 4px;
+    }
+
+    /* ── Acesso ── */
+    .access {
+      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+      padding: 40px 24px;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+    .access .btn {
+      display: inline-block;
+      background: #1a6e3c;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .access .btn:hover { background: #145530; }
+
+    /* ── Footer ── */
+    footer {
+      background: #1a1a2e;
+      color: #ccc;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.9rem;
+    }
+    footer strong { color: #fff; }
+    footer a {
+      color: #6fcf97;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+    footer .contact-item {
+      margin: 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+    <div class="header-inner">
       <img src="logo.png" alt="CG Perícias" />
-      <h1>CG Perícias</h1>
-      <p>Acesse o sistema de laudos e perícias</p>
-      <!-- https://www-cgpericias-com-br.lovable.app -->
+      <div class="header-tagline">
+        Engenharia de Materiais<br />
+        <strong>Perícias e Assistência Técnica</strong><br />
+        em Revestimentos Cerâmicos
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <h1>CG Perícias e Assistência Técnica</h1>
+    <p class="subtitle">
+      Excelência técnica em Engenharia de Materiais com foco em revestimentos cerâmicos. 
+      Atuação em todo o Brasil.
+    </p>
+    <a class="btn" href="#contato">Solicitar orçamento</a>
+  </section>
+
+  <!-- ========== APRESENTAÇÃO ========== -->
+  <section class="about">
+    <h2>Quem sou</h2>
+    <p>
+      Sou <strong>Claudia Gibertoni</strong>, engenheira de materiais com sólida experiência 
+      em perícias judiciais e assistência técnica. Especialista em revestimentos cerâmicos, 
+      ofereço análises técnicas rigorosas e imparciais para advogados, construtoras, 
+      incorporadoras e magistrados. As análises são realizadas baseadas nas normas técnicas em vigência.
+    </p>
+  </section>
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section>
+    <h2>Áreas de atuação</h2>
+    <p class="section-subtitle">Serviços técnicos especializados em Engenharia de Materiais</p>
+
+    <div class="services-grid">
+
+      <!-- Perito Judicial -->
+      <div class="service-card">
+        <h3>⚖️ Perito Judicial</h3>
+        <p>Nomeada pelo juízo para elaborar laudos periciais técnicos e imparciais. Atuação em:</p>
+        <ul>
+          <li>Vícios construtivos em revestimentos cerâmicos</li>
+          <li>Descolamentos, trincas e fissuras</li>
+          <li>Análise de conformidade técnica (normas ABNT)</li>
+          <li>Vistorias e inspeções prediais relacionadas ao sistema revestimento cerâmico</li>
+        </ul>
+      </div>
+
+      <!-- Assistente Técnica -->
+      <div class="service-card">
+        <h3>🔍 Assistente Técnica</h3>
+        <p>Contratada por uma das partes para acompanhar a perícia e emitir parecer técnico. Serviços:</p>
+        <ul>
+          <li>Acompanhamento de prova pericial</li>
+          <li>Elaboração de pareceres técnicos</li>
+          <li>Formulação de quesitos técnicos</li>
+          <li>Assessoria estratégica para advogados</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== QUEM ATENDO ========== -->
+  <section>
+    <h2>Quem atendo</h2>
+    <p class="section-subtitle">Soluções técnicas para diferentes públicos</p>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="icon">👩‍⚖️</div>
+        <h4>Magistrados</h4>
+        <p>Laudos periciais claros e objetivos para fundamentar decisões judiciais</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon">⚖️</div>
+        <h4>Advogados</h4>
+        <p>Assessoria técnica, pareceres e quesitos para fortalecer sua argumentação</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon">🏗️</div>
+        <h4>Construtoras e Incorporadoras</h4>
+        <p>Análise técnica preventiva e corretiva em revestimentos cerâmicos</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon">👤</div>
+        <h4>Particulares</h4>
+        <p>Vistorias e laudos para comprovação de causas de manifestações patológicas no sistema revestimento cerâmico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACESSO AO SISTEMA ========== -->
+  <section>
+    <div class="access">
+      <h3 style="margin-bottom: 8px;">📋 Sistema de Laudos</h3>
+      <p style="color: #555; margin-bottom: 20px;">Acesse a plataforma de gestão de perícias e documentos técnicos</p>
       <a class="btn" href="https://www-cgpericias-com-br.lovable.app" target="_blank" rel="noopener">
         Acessar o sistema
       </a>
     </div>
-  </body>
+  </section>
+
+  <!-- ========== CONTATO / FOOTER ========== -->
+  <footer id="contato">
+    <strong style="font-size: 1.1rem;">CG Perícias e Assistência Técnica</strong>
+    <div style="margin-top: 16px;">
+      <div class="contact-item">📧 <a href="mailto:cgibertoni@yahoo.com.br">cgibertoni@yahoo.com.br</a></div>
+             <div style="margin-top: 16px; font-size: 0.8rem; color: #888;">
+        &copy; 2026 CG Perícias. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
